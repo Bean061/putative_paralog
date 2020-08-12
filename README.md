@@ -26,12 +26,12 @@ It includes three steps as follows:
 1. Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
   This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
   
-  Please type in the following arguments in order: 
+  ```
+  Please type in the following arguments after Step1.sh in order: 
   * The direcotory HybPiper.
   * full name of namelist.
-
-example ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
-
+  example ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
+  ```
 2.
 
 3.
