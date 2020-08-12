@@ -9,22 +9,28 @@ All the intron and exon sequences are considered as input for Step1.
 
 ## Software/dependencies
 
-1. [Picard](http://broadinstitute.github.io/picard/)
+1. [Picard](http://broadinstitute.github.io/picard/) for Step1.
 
-2. [GATK](https://software.broadinstitute.org/gatk/download/)
+2. [GATK](https://software.broadinstitute.org/gatk/download/) for Step1.
 
-3. python3 dependencies
+3. [python3](https://www.python.org/downloads/) and its dependencies for Step2.
 * [Biopython](https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
 * [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). Easy installation from [conda](https://anaconda.org/anaconda/numpy)
 
 ## Environment
-examples can be run on Mac or Linux.
+Examples can be run on Mac or Linux.
 
+## Steps
 It includes three steps as follows:
 
+1. Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
+  This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
+  
+  Please type in the following arguments in order: 
+  * The direcotory HybPiper.
+  * full name of namelist.
 
-
-1. Concatenate all the supercontigs into a single file. Given a directory gerated by HybPiper called prefix:
+example ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
 
 2.
 
