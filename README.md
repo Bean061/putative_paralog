@@ -19,6 +19,10 @@ All the intron and exon sequences are considered as input for Step1.
 * [Biopython](https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
 * [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). Easy installation from [conda](https://anaconda.org/anaconda/numpy)
 
+4. [MAFFTT](https://mafft.cbrc.jp/alignment/software/) for Step3. Easy installation from [conda](https://anaconda.org/bioconda/mafft)
+
+5. [trimAl](http://trimal.cgenomics.org/) for Step3. Easy installation from [conda](https://anaconda.org/bioconda/trimal)
+
 ## Environment
 Examples can be run on Mac or Linux.
 
@@ -56,14 +60,16 @@ It includes 8 steps.
 
 ![ ](images/Fig.2pipeline.png)
 
-```
-  To find putative paralogs in 353 enrichment data. It requires three input components and one output component. The '-he' and '-hs' are not necessary. Dependencies: mafft and trimal installed by conda. -ifa, -ina, -iref, -io, -o are required arguments
-  
-  To check all parameters in PPD.py  
-```
 
+  This script is used to find putative paralogs in 353 enrichment data. It requires three input components and one output component. The '-he' and '-hs' are not necessary. -ifa, -ina, -iref, -io, -o are required arguments
+  
+  To check all parameters in PPD.py using:
+  ```python
+  python PPD.py -h
+  ```
+  
 ```python
-usage: FPP_1.3.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
+usage: PPD.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
                   [-iref INPUT_REF_SEQ] [-io INPUT_OUTGROUP] [-o OUTPUT_DIR]
                   [-t SEQ_TYPE] [-he HSITE_VALUE] [-hs HS_MAX_VALUE]
                   [-w WINDOW_SIZE] [-m MAX_P_SITE]
