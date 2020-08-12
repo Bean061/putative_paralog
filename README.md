@@ -1,4 +1,6 @@
 # Putative Paralogs Detection (PPD)
+-- [read our article soon!]()
+by Wenbin Zhou and John Soghigian
 
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. Highly recommended for Hyb-Seq downstream analysis.
 
@@ -31,10 +33,11 @@ It includes three steps as follows:
   * The direcotory HybPiper.
   * full name of namelist.
   
-  Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
+  Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ [full_path]/namelist.txt
   ```
   
-2. Step2: This script is used to generate the degenerated seuqences using IPUAC codes.
+2. Step2: Generate the degenerated seuqences using IPUAC codes.
+This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
 
 ```
   "Please type in the following arguments after Step2.sh in order: 
@@ -45,8 +48,17 @@ It includes three steps as follows:
   5. output directory (to keep the degerated sequences file, which will be used for Step3).
   6. full name of namelist.
   
-  Example: ./Step2.sh 100 2 [Step1_output_path] [QC_raw_reads_path] [output_directory] [full name of namelist]
+  Example: ./Step2.sh 100 2 [Step1_output_path] [QC_raw_reads_path] [output_directory] [full_path]/namelist.txt
 ```
 
-3.
+3. Step3: Conduct downstream analysis for matrices with heterozyous sites information.
+It includes 8 steps.
 
+![](images/)
+
+
+## Citation
+
+* Zhou et al., in prepare.
+
+* Kates, H.R., Johnson, M.G., Gardner, E.M., Zerega, N.J. and Wickett, N.J., 2018. Allele phasing has minimal impact on phylogenetic reconstruction from targeted nuclear gene sequences in a case study of Artocarpus. American journal of botany, 105(3), pp.404-416.
