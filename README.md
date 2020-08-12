@@ -9,9 +9,16 @@ All the intron and exon sequences are considered as input for Step1.
 
 ## Software/dependencies
 
-*
-*
-*
+* [Picard]: http://broadinstitute.github.io/picard/
+
+* [GATK]: https://software.broadinstitute.org/gatk/download/
+
+* python3 dependencies
+...1. [Biopython] (https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
+...2. [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). Easy installation from [conda](https://anaconda.org/anaconda/numpy)
+
+## Environment
+examples can be run on Mac or Linux.
 
 It includes three steps as follows:
 
