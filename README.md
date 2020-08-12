@@ -54,7 +54,7 @@ This script is modified from [Mossmatters github "Alleles from HybSeq Data"](htt
 3. Step3: Conduct downstream analysis for matrices with heterozyous sites information.
 It includes 8 steps.
 
-![](images/Fig.2pipeline.pdf)
+![ ](images/Fig.2pipeline.png)
 
 
 ## Citation
