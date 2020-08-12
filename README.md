@@ -9,11 +9,11 @@ All the intron and exon sequences are considered as input for Step1.
 
 ## Software/dependencies
 
-1. [Picard](http://broadinstitute.github.io/picard/) for Step1.
+1. [Picard](http://broadinstitute.github.io/picard/) for Step2.
 
-2. [GATK](https://software.broadinstitute.org/gatk/download/) for Step1.
+2. [GATK](https://software.broadinstitute.org/gatk/download/) for Step2.
 
-3. [python3](https://www.python.org/downloads/) and its dependencies for Step2.
+3. [python3](https://www.python.org/downloads/) and its dependencies for Step3.
 * [Biopython](https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
 * [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). Easy installation from [conda](https://anaconda.org/anaconda/numpy)
 
@@ -23,16 +23,30 @@ Examples can be run on Mac or Linux.
 ## Steps
 It includes three steps as follows:
 
-1. Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
+1. Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
   This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
   
   ```
   Please type in the following arguments after Step1.sh in order: 
   * The direcotory HybPiper.
   * full name of namelist.
-  example ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
+  
+  Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ /[full_path]/namelist.txt
   ```
-2.
+  
+2. Step2: This script is used to generate the degenerated seuqences using IPUAC codes.
+
+```
+  "Please type in the following arguments after Step2.sh in order: 
+  1. BWA -k matching base length (if raw reads are 150 bp, we recommand use 100 bp here). 
+  2. ploidy number of a species (2, 3, 4 ...)
+  3. a direcotory containing consensus sequences from Step1.
+  4. a directory containing all raw reads file after QC control (keep raw reads in fastq.gz format).
+  5. output directory (to keep the degerated sequences file, which will be used for Step3).
+  6. full name of namelist.
+  
+  Example: ./Step2.sh 100 2 [Step1_output_path] [QC_raw_reads_path] [output_directory] [full name of namelist]
+```
 
 3.
 
