@@ -14,7 +14,6 @@ All the intron and exon sequences are considered as input for Step1.
 2. [GATK](https://software.broadinstitute.org/gatk/download/)
 
 3. python3 dependencies
-
 ..* [Biopython](https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
 ..* [numpy](https://numpy.org/doc/stable/user/whatisnumpy.html). Easy installation from [conda](https://anaconda.org/anaconda/numpy)
 
