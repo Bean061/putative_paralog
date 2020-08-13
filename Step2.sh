@@ -118,7 +118,7 @@ samtools index $supercontig.marked.bam
 #samtools mpileup -B -f $supercontig $supercontig.marked.bam -v -u > $supercontig.vcf
 
 echo "$2"
-gatk HaplotypeCaller \
+gatk --java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true' HaplotypeCaller \
 -R $supercontig \
 -I $supercontig.marked.bam \
 -ploidy $2 \
@@ -137,7 +137,7 @@ time gatk SelectVariants \
 
 echo "Generating IUPAC FASTA file"
 
-gatk FastaAlternateReferenceMaker \
+gatk --java-options '-DGATK_STACKTRACE_ON_USER_EXCEPTION=true' FastaAlternateReferenceMaker \
 -R $supercontig \
 -O $prefix.degenerated.fasta \
 -V $supercontig.snps.vcf \

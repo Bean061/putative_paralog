@@ -2,7 +2,7 @@
 ## This script is modified from Mossmatters github: https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow
 ## make sure namelist.txt is separated by \n
 echo "This script is used for concatenate all the supercontigs into a single file.
-All supercontigs are stored in two new files named supercontig and exon.
+All supercontigs are stored in a new generated file named supercontig.
 "
 
 echo "Please type in the following arguments in order: 
