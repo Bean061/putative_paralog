@@ -54,6 +54,8 @@ This script is modified from [Mossmatters github "Alleles from HybSeq Data"](htt
   
   Example: ./Step2.sh 100 2 [Step1_output_path] [QC_raw_reads_path] [output_directory] [full_path]/namelist.txt
 ```
+### Note
+Please check Step2 result contains all sequences from all individuals. If not, you can generate a new subset namelist file and run the Step2 again.
 
 3. Step3: Conduct downstream analysis for matrices with heterozyous sites information.
 It includes 8 steps.
