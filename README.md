@@ -12,8 +12,15 @@ All the intron and exon sequences are considered as input for Step1.
 ## Software/dependencies
 
 1. [Picard](http://broadinstitute.github.io/picard/) for Step2.
+```
+check if picard is installed successfully by typing "picard -h" in terminal.
+```
 
 2. [GATK](https://software.broadinstitute.org/gatk/download/) for Step2.
+
+```
+check if GATK is installed successfully by typing "gatk -h" in terminal.
+```
 
 3. [python3](https://www.python.org/downloads/) and its dependencies for Step3.
 * [Biopython](https://biopython.org/wiki/Packages). Easy installation from [conda](https://biopython.org/wiki/Packages) 
@@ -21,7 +28,15 @@ All the intron and exon sequences are considered as input for Step1.
 
 4. [MAFFT](https://mafft.cbrc.jp/alignment/software/) for Step3. Easy installation from [conda](https://anaconda.org/bioconda/mafft)
 
+```
+check if MAFFT is installed successfully by typing "mafft -h" in terminal.
+```
+
 5. [trimAl](http://trimal.cgenomics.org/) for Step3. Easy installation from [conda](https://anaconda.org/bioconda/trimal)
+
+```
+check if trimAl is installed successfully by typing "trimal -h" in terminal.
+```
 
 ## Environment
 Examples can be run on Mac or Linux.
