@@ -120,6 +120,6 @@ optional arguments:
 
 ## Citation
 
-* Zhou et al., in prepare.
+* Zhou et al., A New Paralog Removal Pipeline Resolves Conflict between RAD-Seq and Enrichment. in prep.
 
 * Kates, H.R., Johnson, M.G., Gardner, E.M., Zerega, N.J. and Wickett, N.J., 2018. Allele phasing has minimal impact on phylogenetic reconstruction from targeted nuclear gene sequences in a case study of Artocarpus. American journal of botany, 105(3), pp.404-416.
