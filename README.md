@@ -1,4 +1,4 @@
-# Putative Paralogs Detection (PPD)
+# Putative Paralogs Detection (PPD) for Enrichment Data
 -- [read our article soon!]()
 by Wenbin Zhou and John Soghigian
 
