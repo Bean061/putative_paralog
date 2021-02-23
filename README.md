@@ -79,8 +79,9 @@ It includes 8 steps.
 
 ![ ](images/Fig.2pipeline.png)
 
+example: python ../PPD_changed.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
 
-  This script is used to find putative paralogs in 353 enrichment data. It requires three input components and one output component. The '-he' and '-hs' are not necessary. -ifa, -ina, -iref, -io, -o are required arguments
+  This script is used to find putative paralogs in 353 enrichment data. It requires three input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
   
   To check all parameters in PPD.py using:
   ```python
@@ -109,12 +110,18 @@ optional arguments:
                         It can be supercontig or exon data type. Default is supercontig
   -he HSITE_VALUE, --Hsites HSITE_VALUE
                         Maximum percentage of heterozygous site in a sequence. The default value is 0.05 (means 5%).
+  -gt GAP_THRESHOLD, --gapthreshold GAP_THRESHOLD
+                        1 - (fraction of sequences with a gap allowed). See details in trimmAl -gt
   -hs HS_MAX_VALUE, --Hs HS_MAX_VALUE
                         Maximum shared heterozygous percentage at a site. The default value is 0.5 (means 50%).
+  -nh HS_SITE_NUMBER, --numberH HS_SITE_NUMBER
+                        The number of sites with maximum shared heterozygous percentage. The default value is 1, which means if one or more sites were detected, the locus will be considered as paralogs.
   -w WINDOW_SIZE, --windowsize WINDOW_SIZE
                         setting the sliding window size. The default is 20 bp.
-  -m MAX_P_SITE, --maxpsite MAX_P_SITE
+  -mi MAX_P_SITE, --maxpsite MAX_P_SITE
                         The number of polymorphism site in each sliding window without outgroup. Default is 5.
+  -mo MAX_P_SITE_O, --maxpsiteo MAX_P_SITE_O
+                        The number of polymorphism site of outgroup in each sliding window. Default is 8.
 
 ```
 
