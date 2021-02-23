@@ -42,9 +42,11 @@ check if trimAl is installed successfully by typing "trimal -h" in terminal.
 Examples can be run on Mac or Linux.
 
 ## Steps
-It includes three steps as follows:
+It includes two parts as follows:
 
-1. Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
+![ ](images/Fig.2pipeline.png)
+
+1. Part1_Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
   This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
   
   ```
@@ -55,7 +57,7 @@ It includes three steps as follows:
   Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ [full_path]/namelist.txt
   ```
   
-2. Step2: Generate the degenerated seuqences using IPUAC codes.
+2. Part1_Step2: Generate the degenerated seuqences using IPUAC codes.
 This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
 
 ```
@@ -74,10 +76,10 @@ This script is modified from [Mossmatters github "Alleles from HybSeq Data"](htt
 Please check Step2 result contains all sequences from all individuals. If not, you can generate a new subset namelist file and run the Step2 again.
 ```
 
-3. Step3: Conduct downstream analysis for matrices with heterozyous sites information.
+3. Part2: Conduct downstream analysis for matrices with heterozyous sites information.
 It includes 8 steps.
 
-![ ](images/Fig.2pipeline.png)
+
 
 example: python ../PPD_changed.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
 
