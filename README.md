@@ -46,7 +46,7 @@ It includes two parts as follows:
 
 ![ ](images/Fig.2pipeline.png)
 
-1. Part1_Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
+Part1: Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
   This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
   
   ```
@@ -57,7 +57,7 @@ It includes two parts as follows:
   Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ [full_path]/namelist.txt
   ```
   
-2. Part1_Step2: Generate the degenerated seuqences using IPUAC codes.
+Part1: Step2: Generate the degenerated seuqences using IPUAC codes.
 This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
 
 ```
@@ -76,12 +76,11 @@ This script is modified from [Mossmatters github "Alleles from HybSeq Data"](htt
 Please check Step2 result contains all sequences from all individuals. If not, you can generate a new subset namelist file and run the Step2 again.
 ```
 
-3. Part2: Conduct downstream analysis for matrices with heterozyous sites information.
-It includes 8 steps.
+Part2: Conduct downstream analysis for matrices with heterozyous sites information.
+It includes 8 steps for trimming and paralog detection (see Figure above).
 
 
-
-example: python ../PPD_changed.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
+EXAMPLE: python ../PPD_changed.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
 
   This script is used to find putative paralogs in 353 enrichment data. It requires three input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
   
