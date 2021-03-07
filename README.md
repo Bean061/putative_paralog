@@ -114,7 +114,7 @@ optional arguments:
   -he HSITE_VALUE, --Hsites HSITE_VALUE
                         Maximum percentage of heterozygous site in a sequence. The default value is 0.05 (means 5%).
   -gt GAP_THRESHOLD, --gapthreshold GAP_THRESHOLD
-                        1 - (fraction of sequences with a gap allowed). See details in trimmAl -gt
+                        1 - (fraction of sequences with a gap allowed). See details in trimmAl -gt. The default value is 0.51.
   -hs HS_MAX_VALUE, --Hs HS_MAX_VALUE
                         Maximum shared heterozygous percentage at a site. The default value is 0.5 (means 50%).
   -nh HS_SITE_NUMBER, --numberH HS_SITE_NUMBER
