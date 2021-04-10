@@ -1,6 +1,12 @@
-#### This pipeline can help trimming all genes alignment and remove the putative paralogs.
+#### plese cite 
+# Zhou et al., in review.
+# The goal of This pipeline can help trimming all genes alignment and remove the putative paralogs
+# based on the number of heterozygous sites and shared heterozygous sites information.
+
 #### Any questions, please contact Wenbin Zhou. wzhou10@ncsu.edu
 
+
+#### python modules ####
 import os
 from Bio import SeqIO
 import numpy as np
@@ -13,16 +19,17 @@ from itertools import tee
 from Bio.Align import MultipleSeqAlignment
 from Bio.Alphabet import IUPAC, Gapped
 
-####
+#### iupac code list for the sequences from multiploidy species ####
 
 iupac = ['m', 'r', 'w', 's', 'y', 'k', 'M', 'R', 'W', 'S', 'Y', 'K', "v", "h", "d", "b", "n", "V", "H", "D", "B"]
-### define iupac code for Ploidy over 2
+
+#### missing data code in a sequence ####
 missing_data = ['-', '?', "n", "N"]
 ##### read each fasta sequences
 
 
 
-### return species list as an input for step one.
+### return species list as an input for step one. ###
 def input_namelist(namelist_file):
     try:
         text1 = []
@@ -103,7 +110,7 @@ def rm_Hs_sequence(seq_directory, namelist_path, Hsite_value =0.05):
         os.makedirs(out_file0)
 
 
-    # ### loop all fasta files
+    #### loop all fasta files
     sum = ""
     for file in os.listdir(seq_directory):
          ### This is for mac user.
@@ -242,36 +249,6 @@ def mafft_alignment(seq_directory):
         print("s3 is not finshed yet. Please check the previous step.")
 
 
-# ### s5 trimal the alignments. replace needs
-# def trimal_align_1(seq_directory):
-#
-#     ### input files are from s4
-#     genes_result_s4 = seq_directory.replace("s1_Gene/", "s4_alignments/")
-#
-#     ### mkdir output directory for s5
-#     genes_result_s5 = seq_directory.replace("s1_Gene/", "s5_triaml1st/")
-#     if os.path.isdir(genes_result_s5) == False:
-#         os.makedirs(genes_result_s5)
-#         print(genes_result_s5)
-#
-#     ### replace all n to -, otherwise trimal can not run successfully.
-#     cmd_replace_N = "FILES=" + genes_result_s4 + " && for f in $FILES*; do; sed -i '' -e 's/n/-/g' $f; done;"
-#     os.system(cmd_replace_N)
-#
-#     ### run trimal.
-#     try:
-#         for file in os.listdir(genes_result_s4):
-#             fname = genes_result_s4 + file
-#             output_name = genes_result_s5 + file
-#             if file != genes_result_s4 + ".DS_Store":
-#                 cmd = "trimal -in " + fname + " -out " + output_name + " -automated1"
-#                 print(cmd)
-#                 os.system(cmd)
-#
-#     except:
-#         print("s4 is not finshed yet. Please check the previous step.")
-
-
 ### s5 remove reference sequence
 def rm_reference_from_align(seq_directory, reference_name):
 
@@ -331,9 +308,9 @@ def trimal_align_2(seq_directory, gap_fraction = 0.51):
 
 
 
-### s7 many functions for a better trimmed result
+### s7 functions for a better trimming result
 
-### sliding window function.
+### sliding window function. ###
 def window(iterable, size):
     iters = tee(iterable, size)
     for i in range(1, size):
@@ -531,13 +508,6 @@ def rm_wrong_polymorphism_sites(seq_directory, outgroup_path, window_size = 20, 
                 total_wrong_poly_sites = total_wrong_poly_sites + list(range(total_length-10, total_length))
                 ### extract the polymorphic sites from alignment data, might be useful for delete the first 2 species.
                 unique_wrong_sites = list(np.unique(total_wrong_poly_sites))
-                # sum2 = alignment[:, total_length:total_length + 1]
-                # for i in unique_wrong_sites:
-                #     sum2 = sum2 + alignment[:, i:i+1]
-                # print(sum2)
-                # SeqIO.write(sum2, "/Users/zhouwenbin/Downloads/result/M40_total.phy", "phylip")
-
-
 
 
                         # print(new_seq)
@@ -733,9 +703,6 @@ def replace_outgroup_with_gap(seq_directory, outgroup_path, window_size = 20, Ma
                 AlignIO.write(align_2, output_directory_file, "fasta")
 
 
-
-
-
 ### s8 romove putative paralogs.
 def paralog_test(seq_directory, Hs_threshold = 0.5, nh = 1):
 
@@ -901,7 +868,7 @@ def main():
                         help='Maximum percentage of heterozygous site in a sequence. The default value is 0.05 (means 5%%).')
     
     parser.add_argument("-gt", "--gapthreshold", dest='gap_threshold', type=float, default=0.51,
-                        help='1 - (fraction of sequences with a gap allowed). See details in trimmAl -gt')
+                        help='1 - (fraction of sequences with a gap allowed). See details in trimmAl -gt. The default value is 0.51.')
 
     parser.add_argument("-hs", "--Hs", dest= 'Hs_max_value',type=float, default=0.5,
                         help='Maximum shared heterozygous percentage at a site. The default value is 0.5 (means 50%%).')
@@ -922,18 +889,6 @@ def main():
     # print(args)
     f = open("PPD.log", "w")
     sys.stdout = f
-
-
-    # args.input_dir
-    # dir_path = os.path.dirname(os.path.realpath(args.input_dir))
-    # print(dir_path)
-    # print(args.input_dir)
-    # path, filename = os.path.split(args.input_sp_name)
-    # print(path + ' --> ' + filename + "\n")
-    #print(os.getcwd())
-    ### get full length of a directory
-    # full_path = os.path.realpath(args.input_sp_name)
-    # print(full_path + "\n")
 
 
 
