@@ -128,6 +128,9 @@ optional arguments:
 
 ```
 
+## Output
+The second part of PPD will generate eight output folders for each step. Folder 1 contians all individual sequences from the same gene (maximum is 353 genes for Angiosperm 353). Folder 2 has the matrices with removed the individual sequences having high Heterozygous and an output recording the heterozygousity percentage for each individual gene sequence. Folder 3 has matrices with references sequences included. Folder 4 includes the alignments using MAFFT. Folder 5 contains the alignments without references. Folder 6 contains the alignments with gappy region trimmed. Folder 7 contains the alignments with hypervariable regions trimmed by sliding window method. Folder 8 contains the categorized orthologs and paralogs data and a record for the shared hterozygous site percentage among each gene.
+
 ## Citation
 
 * Zhou et al., A New Paralog Removal Pipeline Resolves Conflict between RAD-Seq and Enrichment. in prep.
