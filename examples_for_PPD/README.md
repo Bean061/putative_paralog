@@ -1,4 +1,4 @@
-# this example is used for Step3.
+# this example is used for Part2.
 
 The supercontig file contains the degenerated sequences from Step2.
 
