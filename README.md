@@ -1,6 +1,4 @@
 # Putative Paralogs Detection (PPD) for Enrichment Data
--- [read our article soon!](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425?searchresult=1)
-by Wenbin Zhou, John Soghigian and Qiu-Yun(Jenny) Xiang
 
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. Highly recommended for Hyb-Seq downstream analysis after [HybPiper](https://github.com/mossmatters/HybPiper).
 
