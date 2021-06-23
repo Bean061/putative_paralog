@@ -1,5 +1,5 @@
 # Putative Paralogs Detection (PPD) for Enrichment Data
--- [read our article soon!]()
+-- [read our article soon!](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425?searchresult=1)
 by Wenbin Zhou, John Soghigian and Qiu-Yun(Jenny) Xiang
 
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. Highly recommended for Hyb-Seq downstream analysis after [HybPiper](https://github.com/mossmatters/HybPiper).
@@ -133,6 +133,6 @@ The second part of PPD will generate eight output folders for each step. Folder 
 
 ## Citation
 
-* Zhou et al., A New Paralog Removal Pipeline Resolves Conflict between RAD-Seq and Enrichment. in prep.
+* Zhou, W., Soghigian, J., Xiang, Q. 2021, A New Pipeline for Removing Paralogs in Target Enrichment Data. Systematic Biology, syab044. DOI: /10.1093/sysbio/syab044.
 
 * Kates, H.R., Johnson, M.G., Gardner, E.M., Zerega, N.J. and Wickett, N.J., 2018. Allele phasing has minimal impact on phylogenetic reconstruction from targeted nuclear gene sequences in a case study of Artocarpus. American journal of botany, 105(3), pp.404-416.
