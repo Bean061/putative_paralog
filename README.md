@@ -80,12 +80,11 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
 
 
 #### EXAMPLE
-  The command for examples.
+##### The command for the example data.
   ```python
   python ../PPD.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
   ```
-  
-  This script is used to find putative paralogs in 353 enrichment data. It requires four input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
+##### This script is used to find putative paralogs in 353 enrichment data. It requires four input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
   
   To check all parameters in PPD.py using:
   ```python
