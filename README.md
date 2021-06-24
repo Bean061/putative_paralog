@@ -92,6 +92,7 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
   python PPD.py -h
   ```
   
+##### Parameter Setting Details
 ```python
 usage: PPD.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
                   [-iref INPUT_REF_SEQ] [-io INPUT_OUTGROUP] [-o OUTPUT_DIR]
