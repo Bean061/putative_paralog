@@ -80,6 +80,7 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
 
 
 #### EXAMPLE
+  The command for examples.
   ```python
   python ../PPD.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
   ```
@@ -94,8 +95,8 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
 ```python
 usage: PPD.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
                   [-iref INPUT_REF_SEQ] [-io INPUT_OUTGROUP] [-o OUTPUT_DIR]
-                  [-t SEQ_TYPE] [-he HSITE_VALUE] [-hs HS_MAX_VALUE]
-                  [-w WINDOW_SIZE] [-m MAX_P_SITE]
+                  [-t SEQ_TYPE] [-he HSITE_VALUE] [-gt GAP_THRESHOLD] [-hs HS_MAX_VALUE]
+                  [-nh HS_SITE_NUMBER] [-w WINDOW_SIZE] [-mi MAX_P_SITE] [-mo MAX_P_SITE_O]
 
 optional arguments:
   -h, --help            show this help message and exit
