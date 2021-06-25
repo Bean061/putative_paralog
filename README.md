@@ -1,6 +1,6 @@
 # Putative Paralogs Detection (PPD) for Enrichment Data
 
-This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. Highly recommended for Hyb-Seq downstream analysis after [HybPiper](https://github.com/mossmatters/HybPiper).
+This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2021)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
 
 ## Prerequisites:
 Run the main [HybPiper](https://github.com/mossmatters/HybPiper) script and check the results in [individual]/[gene]/[individual]/sequences/intron/ and [individual]/[gene]/[individual]/sequences/FNA/ directories.
@@ -44,7 +44,7 @@ It includes two parts as follows:
 
 ![ ](images/Fig.2pipeline.png)
 
-### Part1
+### Part1 generates contigs with degenerate sequence does where heterozygotes are detected
 Step1: Concatenate all the supercontigs into a single file. All supercontigs are stored in two new files named supercontig and exon.
   This script is modified from [Mossmatters github "Alleles from HybSeq Data"](https://github.com/mossmatters/phyloscripts/tree/master/alleles_workflow).
   
@@ -75,14 +75,14 @@ This script is modified from [Mossmatters github "Alleles from HybSeq Data"](htt
 Please check Step2 result contains all sequences from all individuals. If not, you can generate a new subset namelist file and run the Step2 again.
 ```
 
-### Part2
+### Part2 trims alignment and detectes the putative paralogs
 It includes 8 steps for trimming and paralog detection (see Figure above). Conduct the downstream analysis for matrices with heterozyous sites information.
 
 
 #### EXAMPLE
 ##### The command for the example data.
   ```python
-  python ../PPD.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
+  python /your/path/to/PPD.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
   ```
 ##### This script is used to find putative paralogs in 353 enrichment data. It requires four input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
   
@@ -130,7 +130,7 @@ optional arguments:
 ```
 
 ## Output
-The second part of PPD will generate eight output folders for each step. Folder 1 contians all individual sequences from the same gene (maximum is 353 genes for Angiosperm 353). Folder 2 has the matrices with removed the individual sequences having high Heterozygous and an output recording the heterozygousity percentage for each individual gene sequence. Folder 3 has matrices with references sequences included. Folder 4 includes the alignments using MAFFT. Folder 5 contains the alignments without references. Folder 6 contains the alignments with gappy region trimmed. Folder 7 contains the alignments with hypervariable regions trimmed by sliding window method. Folder 8 contains the categorized orthologs and paralogs data and a record for the shared hterozygous site percentage among each gene.
+The second part of PPD will generate eight output folders for each step. Folder 1 contians all individual sequences from the same gene (maximum is 353 genes for Angiosperm 353). Folder 2 has martices of each gene where individual sequences with high heterozygosity have been removed. It also contains text files listing the heterozygosity for each individual gene sequence. Folder 3 has matrices with references sequences included. Folder 4 includes the alignments using MAFFT. Folder 5 contains the alignments without references. Folder 6 contains the alignments with gappy region trimmed. Folder 7 contains the alignments with hypervariable regions trimmed by sliding window method. Folder 8 contains the categorized orthologs and paralogs data and a record for the shared hterozygous site percentage among each gene.
 
 ## Citation
 
