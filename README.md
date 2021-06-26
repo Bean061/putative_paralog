@@ -50,7 +50,7 @@ Step1: Concatenate all the supercontigs into a single file. All supercontigs are
   
   ```
   Please type in the following arguments after Step1.sh in order: 
-  * The direcotory HybPiper.
+  * The directory of HybPiper.
   * full name of namelist.
   
   Example: ./Step1.sh ./HybPiper-master/[Hybpiper_result_file]/ [full_path]/namelist.txt
