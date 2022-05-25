@@ -1,6 +1,6 @@
 # Putative Paralogs Detection (PPD) for Enrichment Data
 
-This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2021)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
+This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2022)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
 
 ## Prerequisites:
 Run the main [HybPiper](https://github.com/mossmatters/HybPiper) script and check the results in [individual]/[gene]/[individual]/sequences/intron/ and [individual]/[gene]/[individual]/sequences/FNA/ directories.
@@ -134,6 +134,6 @@ The second part of PPD will generate eight output folders for each step. Folder 
 
 ## Citation
 
-* Zhou, W., Soghigian, J., Xiang, Q. 2021, A New Pipeline for Removing Paralogs in Target Enrichment Data. Systematic Biology, syab044. DOI: /10.1093/sysbio/syab044.
+* Zhou, W., Soghigian, J., Xiang, Q. 202, A New Pipeline for Removing Paralogs in Target Enrichment Data. Systematic Biology, syab044. DOI: /10.1093/sysbio/syab044.
 
 * Kates, H.R., Johnson, M.G., Gardner, E.M., Zerega, N.J. and Wickett, N.J., 2018. Allele phasing has minimal impact on phylogenetic reconstruction from targeted nuclear gene sequences in a case study of Artocarpus. American journal of botany, 105(3), pp.404-416.
