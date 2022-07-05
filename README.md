@@ -1,6 +1,9 @@
 # Putative Paralogs Detection (PPD) for Enrichment Data
-
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2022)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
+
+## Update - Version 1.0.2
+update an issue on biopython.
+
 
 ## Prerequisites:
 Run the main [HybPiper](https://github.com/mossmatters/HybPiper) script and check the results in [individual]/[gene]/[individual]/sequences/intron/ and [individual]/[gene]/[individual]/sequences/FNA/ directories.
@@ -93,7 +96,7 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
   
 ##### Parameter Setting Details
 ```python
-usage: PPD.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
+usage: PPD1.0.2.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
                   [-iref INPUT_REF_SEQ] [-io INPUT_OUTGROUP] [-o OUTPUT_DIR]
                   [-t SEQ_TYPE] [-he HSITE_VALUE] [-gt GAP_THRESHOLD] [-hs HS_MAX_VALUE]
                   [-nh HS_SITE_NUMBER] [-w WINDOW_SIZE] [-mi MAX_P_SITE] [-mo MAX_P_SITE_O]
