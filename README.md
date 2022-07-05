@@ -2,7 +2,7 @@
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2022)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
 
 ## Update - Version 1.0.2
-update an issue on biopython.
+The version 1.0.2 changed the biopython from 1.7.5 to 1.7.9, because Alphabet was removed from biopython, and add SeqRecord and Seq module.
 
 
 ## Prerequisites:
@@ -85,18 +85,18 @@ It includes 8 steps for trimming and paralog detection (see Figure above). Condu
 #### EXAMPLE
 ##### The command for the example data.
   ```python
-  python /your/path/to/PPD.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
+  python /your/path/to/PPD_1.0.2.py -ifa degenerated_sequences_from_step2 -ina namelist_C.txt -iref Angiosperms353_targetSequences.fasta -io outgroup.txt -o ./ -t supercontig -he 0.05 -gt 0.51 -hs 0.5 -nh 1 -w 20 -mi 5 -mo 8
   ```
 ##### This script is used to find putative paralogs in 353 enrichment data. It requires four input components and one output component. The "-ifa", "-ina", "-iref", "-io", "-o" are required arguments.
   
-  To check all parameters in PPD.py using:
+  To check all parameters in PPD_1.0.2.py using:
   ```python
-  python PPD.py -h
+  python PPD_1.0.2.py -h
   ```
   
 ##### Parameter Setting Details
 ```python
-usage: PPD1.0.2.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
+usage: PPD_1.0.2.py [-h] [-ifa INPUT_DIR] [-ina INPUT_SP_NAME]
                   [-iref INPUT_REF_SEQ] [-io INPUT_OUTGROUP] [-o OUTPUT_DIR]
                   [-t SEQ_TYPE] [-he HSITE_VALUE] [-gt GAP_THRESHOLD] [-hs HS_MAX_VALUE]
                   [-nh HS_SITE_NUMBER] [-w WINDOW_SIZE] [-mi MAX_P_SITE] [-mo MAX_P_SITE_O]
