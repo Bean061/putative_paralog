@@ -2,7 +2,7 @@
 This method is based on shared heterozygous information to detect putative paralogs for Hyb-Seq data. PPD is more effective at detecting putative paralogs than [HybPiper](https://github.com/mossmatters/HybPiper) alone. For further benefits of PPD, see [Zhou et al. (2022)](https://academic.oup.com/sysbio/advance-article/doi/10.1093/sysbio/syab044/6306425).
 
 ## Update - Version 1.0.2
-The version 1.0.2 changed the biopython from 1.7.5 to 1.7.9, because Alphabet was removed from biopython, and add SeqRecord and Seq module.
+Version 1.0.2 changed the biopython from 1.7.5 to 1.7.9, because Alphabet was removed from biopython, and added SeqRecord and Seq module.
 
 
 ## Prerequisites:
