@@ -5,6 +5,7 @@ This method is based on shared heterozygous information to detect putative paral
 Version 2.0.x is for HybPiper v.2.0; Version 1.0.x is for HybPiper v.1.0.
 
 Version 2.0.1 changed gene name calling based on "_" based on the format from HybPiper v.2.0.
+
 Version 1.0.2 changed the biopython from 1.7.5 to 1.7.9, because Alphabet was removed from biopython, and added SeqRecord and Seq module.
 
 
